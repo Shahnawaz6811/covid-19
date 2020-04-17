@@ -1,0 +1,39 @@
+.container {
+  margin: 50px 0;
+}
+
+.card {
+  margin: 0 2% !important;
+
+}
+
+.infected {
+  border-bottom: 10px solid rgba(0,0,255,0.5);
+}
+
+.recovered {
+  border-bottom: 10px solid rgba(0,255,0,0.5);
+}
+
+.recovered_text {
+  color:  rgba(0,255,0,0.8);
+}
+
+.deaths {
+  border-bottom: 10px solid rgba(255,0,0,0.5);
+}
+
+.country {
+  margin-left: 4rem !important;
+  font-size: 2em;
+}
+
+@media (max-width: 770px) {
+  .card {
+    margin: 2% 0 !important;
+  }
+
+  .country {
+    text-align: center;
+  }
+}
