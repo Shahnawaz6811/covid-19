@@ -11,13 +11,12 @@ const Cards = ({
   // console.log(confirmed);
   return (
     <div className={styles.container}>
-      <h3 className={styles.country}>{name}</h3>
-      <Grid container spacing={3}  justify="center">
+      {/* <h4 className={styles.country}>{name}</h4> */}
+      <Grid container spacing={3} justify="center">
         <Grid
           item
           component={Card}
           xs={12}
-          justify='center'
           md={3}
           className={cx(styles.card, styles.infected)}
         >
@@ -58,7 +57,7 @@ const Cards = ({
             <Typography color="textSecondary" gutterBottom>
               Recovered
             </Typography>
-            <Typography variant="h5" className={styles.recovered_text} >
+            <Typography variant="h5" className={styles.recovered_text}>
               {recovered ? (
                 <CountUp
                   start={0}

@@ -15,16 +15,15 @@ class App extends Component {
   render() {
     // console.log(this.props.data);
     const { data, name } = this.props;
-    console.log("data:", data);
+    // console.log("data:", data);
 
     return (
       <div>
         {/* <NewsFeed/> */}
         <div className={styles.container}>
           <img src={coronaImage} alt="COVID-19" className={styles.image} />
-
-          <Cards data={data} name={name} />
           <CountryPicker />
+          <Cards data={data} name={name} />
           <Charts data={data} name={name} />
         </div>
       </div>
@@ -37,11 +36,11 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const mapStateToProps = ({ data, country }) => {
-  console.log(data);
+  // console.log(data);
 
   if (country.name === "Global") {
     return { data: data.data, name: country.name };
-    console.log("global");
+    // console.log("global");
   } else {
     return { data: country.data, name: country.name };
   }

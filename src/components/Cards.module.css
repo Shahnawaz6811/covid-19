@@ -1,5 +1,5 @@
 .container {
-  margin: 50px 0;
+  margin: 10px 0;
 }
 
 .card {
@@ -33,7 +33,4 @@
     margin: 2% 0 !important;
   }
 
-  .country {
-    text-align: center;
-  }
 }

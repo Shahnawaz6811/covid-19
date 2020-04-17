@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import {
-  NativeSelect,
   FormControl,
-  FormHelperText,
-  FormLabel,
 } from "@material-ui/core";
 import * as Actions from "../store/actions";
 import { useSelector, useDispatch } from "react-redux";
@@ -16,7 +13,7 @@ const CountryPicker = () => {
 
   const countries = useSelector(({ countries }) => countries);
   const { data } = countries;
-  console.log('countries: ',countries ); //object which has countries array
+  // console.log('countries: ',countries ); //object which has countries array
 
   const options =
     data.countries &&
@@ -37,7 +34,7 @@ const CountryPicker = () => {
   return (
     <FormControl className={styles.formControl}>
       <SelectSearch
-        options={options}
+        options={options || []}
         defaultValue="India"
         name="India"
         search

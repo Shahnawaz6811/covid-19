@@ -39,7 +39,7 @@ export const fetchCountries = () => {
 
     try {
       const response = await axios.get(`${url}/countries`);
-      console.log(response);
+      // console.log(response);
       dispatch({
         type: "REQUEST_COUNTRIES_SUCCESS",
         payload: response.data,
@@ -64,13 +64,13 @@ export const fetchCountry = (country) => {
     try {
 
       const response = await axios.get(`${url}/countries/${country}`);
-      console.log("response");
+      // console.log("response");
       dispatch({
         type: "REQUEST_COUNTRY_SUCCESS",
         payload: response.data,
       });
     } catch (error) {
-      console.log("error");
+      // console.log("error");
       dispatch({ type: "REQUEST_COUNTRY_FAILED" });
     }
   };

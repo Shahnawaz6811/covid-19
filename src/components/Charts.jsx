@@ -22,7 +22,7 @@ const Charts = (props) => {
     /**return  optional cleanup function, which is called before component
     re-renders to clean up the prev effect*/
     return () => {
-      console.log("Cleaning up");
+      // console.log("Cleaning up");
     };
   }, []);
 
@@ -56,12 +56,12 @@ const Charts = (props) => {
 
 
   const country = useSelector((state) => state.country);
-  console.log("country: ", country.data.confirmed);
+  // console.log("country: ", country.data.confirmed);
 
   const countryConfirmed=country.data.confirmed && country.data.confirmed.value
   const countryRecovered=country.data.recovered && country.data.recovered.value
   const countryDeaths=country.data.deaths && country.data.deaths.value
-  console.log(countryConfirmed, countryRecovered,countryDeaths)
+  // console.log(countryConfirmed, countryRecovered,countryDeaths)
 
 
   // const { data } = country;
